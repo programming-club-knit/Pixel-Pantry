@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Pantry</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Cozy kitchen challenge</p>
+          <h1>Pixel Pantry</h1>
+        </div>
+        <div class="scoreboard">
+          <div class="stat-box">
+            <span class="stat-label">Score</span>
+            <strong id="score-value">0</strong>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Streak</span>
+            <strong id="streak-value">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="game-board">
+        <section class="card recipe-card">
+          <p class="card-heading">Current Dish</p>
+          <h2 id="recipe-name">Garden Bowl</h2>
+          <ul id="recipe-ingredients" class="required-list"></ul>
+        </section>
+
+        <section class="card shelf-card">
+          <div class="section-header">
+            <p class="card-heading">Ingredient Shelf</p>
+          </div>
+          <div id="ingredient-shelf" class="ingredient-shelf"></div>
+        </section>
+
+        <section class="card station-card">
+          <div class="section-header">
+            <p class="card-heading">Cooking Area</p>
+          </div>
+          <div id="cooking-area" class="cooking-area"></div>
+          <div class="station-actions">
+            <button id="cook-btn" class="action-btn primary-btn">Cook</button>
+            <button id="next-btn" class="action-btn secondary-btn">Next Recipe</button>
+            <button id="reset-btn" class="action-btn ghost-btn">Reset</button>
+          </div>
+        </section>
+      </main>
+
+      <div id="feedback" class="feedback" aria-live="polite">
+        Ready to cook something tasty!
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

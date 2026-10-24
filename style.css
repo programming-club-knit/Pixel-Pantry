@@ -1,0 +1,280 @@
+:root {
+  --bg: #f5ecd8;
+  --panel: #fffaf2;
+  --card: #fdf2df;
+  --warm: #be6b42;
+  --warm-dark: #7a3b1d;
+  --sage: #7ea57c;
+  --sage-dark: #3c5a3a;
+  --gold: #f3c96c;
+  --rose: #e6806a;
+  --text: #3f2b20;
+  --muted: #785d4d;
+  --shadow: rgba(97, 59, 32, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #f8f1e2 0%, #f0d8af 100%);
+  color: var(--text);
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(1000px, calc(100% - 32px));
+  margin: 32px auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 18px;
+  background: rgba(255, 250, 242, 0.9);
+  border: 2px solid rgba(122, 59, 29, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 12px 28px var(--shadow);
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.scoreboard {
+  display: flex;
+  gap: 12px;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  padding: 12px 10px;
+  background: var(--card);
+  border: 2px solid rgba(122, 59, 29, 0.1);
+  border-radius: 16px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+#score-value,
+#streak-value {
+  font-size: 1.8rem;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr 1.4fr;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.card {
+  background: rgba(255, 250, 242, 0.95);
+  border: 2px solid rgba(122, 59, 29, 0.12);
+  border-radius: 22px;
+  box-shadow: 0 10px 22px var(--shadow);
+  padding: 18px;
+}
+
+.card-heading {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.recipe-card h2 {
+  margin: 0 0 15px;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.required-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.required-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #f4d4a8;
+  border: 1px solid rgba(122, 59, 29, 0.1);
+  font-weight: 700;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ingredient-shelf {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 150px;
+}
+
+.ingredient-btn {
+  border: 2px solid rgba(122, 59, 29, 0.12);
+  background: #fff0cf;
+  color: var(--text);
+  border-radius: 16px;
+  min-width: 112px;
+  text-align: center;
+  padding: 12px 10px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 8px 16px rgba(123, 77, 38, 0.1);
+}
+
+.ingredient-btn:hover {
+  transform: translateY(-2px);
+}
+
+.ingredient-btn:active {
+  transform: translateY(0);
+}
+
+.ingredient-name {
+  display: block;
+  font-weight: 700;
+}
+
+.ingredient-emoji {
+  display: block;
+  font-size: 1.9rem;
+  margin-bottom: 6px;
+}
+
+.cooking-area {
+  min-height: 180px;
+  border: 2px dashed rgba(122, 59, 29, 0.25);
+  border-radius: 18px;
+  background: rgba(243, 201, 108, 0.1);
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: flex-start;
+}
+
+.chosen-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #dfeec9;
+  border: 1px solid rgba(60, 90, 58, 0.2);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.chosen-chip .remove-icon {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--warm-dark);
+}
+
+.station-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.action-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.action-btn:hover {
+  filter: brightness(0.98);
+}
+
+.primary-btn {
+  background: var(--warm);
+  color: white;
+}
+
+.secondary-btn {
+  background: var(--sage);
+  color: white;
+}
+
+.ghost-btn {
+  background: #f9daca;
+  color: var(--text);
+}
+
+.feedback {
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: rgba(255, 250, 242, 0.9);
+  border-radius: 14px;
+  border: 2px solid rgba(122, 59, 29, 0.12);
+  font-weight: 700;
+  text-align: center;
+  color: var(--warm-dark);
+}
+
+.success {
+  background: rgba(126, 165, 124, 0.18);
+  color: var(--sage-dark);
+}
+
+.error {
+  background: rgba(230, 128, 106, 0.1);
+  color: var(--warm-dark);
+}
+
+@media (max-width: 760px) {
+  .game-board {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,66 @@
+# Contributing to Pixel Pantry
+
+## Before You Start
+
+- Read the README and understand the game flow.
+- Open the repository's GitHub Issues tab and choose an available issue.
+- Check whether the issue is still unassigned before you start.
+- Comment on the issue or follow the event organizer's instructions before beginning work to avoid duplicate effort.
+
+## Set Up the Project
+
+Fork the repository, then clone your fork:
+
+```bash
+git clone <your-fork-url>
+cd pixel-pantry
+git checkout -b fix/issue-number-short-description
+```
+
+Use GitHub's fork workflow rather than asking for direct write access to the event repository.
+
+Open `index.html` in a browser to run the project locally.
+
+## Make Your Fix
+
+- Reproduce the bug before editing.
+- Make the smallest appropriate code change.
+- Keep the work in HTML, CSS, and vanilla JavaScript only.
+- Avoid unrelated refactoring or adding dependencies.
+- Test the affected feature and check that the rest of the game still behaves correctly.
+
+## Submit a Pull Request
+
+After making your fix, commit and push the branch:
+
+```bash
+git add .
+git commit -m "Fix #<issue-number>: short description"
+git push origin fix/issue-number-short-description
+```
+
+Then open a pull request against the event repository's default branch.
+
+The PR description should include:
+- The issue being fixed
+- A short explanation of the change
+- The steps used to test the fix
+
+Where appropriate, use `Closes #<issue-number>` so GitHub can automatically close the issue after the PR is merged.
+
+## Event Rules
+
+- One issue per pull request unless organizers permit otherwise.
+- Do not submit unrelated changes.
+- Do not copy another participant's solution.
+- Keep pull requests small, readable, and focused.
+- Follow the issue's acceptance criteria.
+- Organizers award points after reviewing and verifying a fix.
+- The organizer's decision on scoring and duplicate submissions is final.
+
+## Code of Conduct
+
+Please communicate respectfully, provide constructive feedback, and report problems honestly.
+
+We are here to learn, collaborate, and have fun while building a friendly coding event project.
+
